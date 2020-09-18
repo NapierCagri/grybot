@@ -40,7 +40,7 @@ exports.run = (client, message, args) => {
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ["ban", "avada"],
+  aliases: ["ban"],
   permLevel: 3,
   kategori: "moderasyon"
 };
