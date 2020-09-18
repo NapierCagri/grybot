@@ -10,7 +10,7 @@ if (mesaj.length < 1) return message.reply('Duyurmadın ki');
       embed.setColor('#FF0000')
       embed.setTitle('DUYURU')
       embed.setDescription(mesaj)
-    var generalChannel = client.channels.get("732162909966172251")
+    var generalChannel = client.channels.get("471760510778605589")
     generalChannel.send("@everyone", {embed: embed} );
 };
 
