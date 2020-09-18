@@ -106,7 +106,8 @@ client.on("message", msg => {
     var kanal = client.channels.get("755138899902333009")
     kanal.send(msg.content)
   }
-  
+  if(msg.content.toLowerCase == (ayarlar.prefix + "yardim")) {    msg.reply("```avatar: Avatar'ı gösterir. \naşk: Birisini etiketlerseniz aranızdaki aşkı ölçer. \nbilgi: Hakkınızdaki bilgileri gösterir. \ndans: Dans edersiniz. \nelöp: Birisinin elini öpersiniz. \nfal: Bir şey belirtirseniz falınıza bakar. \nid: ID'nizi gösterir. \npişir: İnsanları pişirirsiniz. \nrus: Rus ruleti oynarsınız. \nsaril: Birisine sarılırsınız. \nsev: Birisini seversiniz. \ntkm: Taş kağıt makas oynarsınız. \nyaz: Yazı yazarsınız. \nöldür: Birisini öldürürsünüz. \nşaplak: İnsanların kel kafasına şaplak atarsınız.```")
+  }
 });
 
 client.elevation = message => {
