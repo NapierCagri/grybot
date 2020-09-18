@@ -5,26 +5,21 @@ exports.run = (client, message, args) => {
    let mesaj = args.slice(0).join(' ');
   const kis = message.author
     var msj = [
-      "Kesinlikle, hiç şüphen olmasın!",
-      "Muhtemelen olacak, rahat ol",
-      "Olur olur sıkma canını",
-      "Olacak gibi ya",
-      "Galiba olur",
-      "Yaaaaaaaaaaani olursa güzel olur, olmazsa da canın sağolsun",
-      "Umutlarını yok etmek istemem ama sanki olmayacak gibi",
-      "Bence olmaz ya boşver",
-      "Yok yok olmaz",
-      "Ümidi kes gitsin",
-      "Maalesef olmayacak",
-      "Kesinlikle olmayacak",
-      "OLMAYACAK! OLURSA DA ADAM DEĞİLİM!"
+      "Olacağını düşünmek Yoda, rahat olmak sen.",
+      "Olacağını ummak mı Yoda gibi?",
+      "Olamamak ben emin, ama inanmak olacağına.",
+      "Bilmemek ben bir şey.",
+      "Üzüldüm buna ben, çünkü olmayacak muhtemelen olacak şey.",
+      "Olmayacak olması gereken şey.",
+      "Ümidi kestiğini gördüm ben olacak olan şeyden.",
+      "Olamayacağını düşündün sen Yoda gibi.",
     ];
 
     var yanıt = msj[Math.floor(Math.random() * msj.length)];
     const embedd = new Discord.RichEmbed()
       .setColor('#FF0000')
       .addField(kis.username + ": ", mesaj)
-      .addField("Dora: ", yanıt)
+      .addField("Yoda: ", yanıt)
     message.channel.send("<@" + kis.id + ">", embedd)
 };
 
