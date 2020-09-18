@@ -5,7 +5,7 @@ exports.run = (client, message, args) => {
   let mesaj = args.slice(0).join(' ');
 if (mesaj.length < 1) return message.reply('Duyurmadın ki');
 
-    var generalChannel = client.channels.get("732162909966172251")
+    var generalChannel = client.channels.get("471760510778605589")
     generalChannel.send("@everyone \n" + mesaj);
 };
 
