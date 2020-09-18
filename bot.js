@@ -79,15 +79,6 @@ client.unload = command => {
 };
 
 client.on("message", msg => {
-  if (msg.content.toLowerCase() === "billy") {
-    const embed = new Discord.RichEmbed();
-    msg.channel.send(
-      "Billy yok! Billy öldü! Kafasına buzdolabı düştüğü gün o iş bitti!"
-    );
-  }
-  if (msg.content.toLowerCase() === prefix + "davet") {
-    msg.reply("\nGryffindor: https://discord.gg/3DEc4TG \nMagicverse: https://discord.gg/PygcuQN");
-  }
   if (msg.content.toUpperCase() === "GÜNAYDIN") {
     var gnd = [
       "Hiçbir gece sonsuza kadar gece olarak kalmaz. Gündüz ile güneş ile yerini paylaşması gerekir. Sen bir keder ile karşılaştığında gecenin sona ereceğini bilerek gülümse ve yılma. Günün aydın ve mükemmel olsun sevdiğim.",
@@ -108,76 +99,14 @@ client.on("message", msg => {
       .then()
       .catch(console.error);
   }
-  if (msg.content.toLowerCase() === "apsethu's") {
-    var bann = [
-      "https://img-s1.onedio.com/id-575872d81dcb022235ef3ba0/rev-0/w-635/listing/f-jpg-gif-webp-webm-mp4/s-d0f4f9ed0be9574ff656957e56b4afb0ae97d916.gif",
-      "https://img-s2.onedio.com/id-5758729069f9773f22c4c091/rev-0/w-635/listing/f-jpg-gif-webp-webm-mp4/s-aa88eda452097bd7903cd87e59246c21b338d715.gif",
-      "https://img-s1.onedio.com/id-57587377190ed92e586cd198/rev-0/w-500/s-6fbd503188f9983e69d749f2b06360b38547e528.gif",
-      "https://img-s2.onedio.com/id-575874eb4ec5838a6d0ca569/rev-0/w-500/s-87a1adb648d7fc2c30f1300a2eda449de0e88122.gif"
-    ];
-    var bank = bann[Math.floor(Math.random() * bann.length)];
-    const embed2 = new Discord.RichEmbed();
-    embed2.setColor("#FF0000");
-    embed2.setTitle("ALLAHU EKBER ALLAHU EKBER");
-    embed2.setImage(bank);
-    msg.channel.send(embed2);
+  if(msg.content.toUpperCase == "RUBY") {
+    msg.reply("https://www.youtube.com/channel/UC9psneM5M8x-bOeLSJD6hQA")
   }
-  if (msg.content.toLowerCase() === "apsethus") {
-    var bann = [
-      "https://img-s1.onedio.com/id-575872d81dcb022235ef3ba0/rev-0/w-635/listing/f-jpg-gif-webp-webm-mp4/s-d0f4f9ed0be9574ff656957e56b4afb0ae97d916.gif",
-      "https://img-s2.onedio.com/id-5758729069f9773f22c4c091/rev-0/w-635/listing/f-jpg-gif-webp-webm-mp4/s-aa88eda452097bd7903cd87e59246c21b338d715.gif",
-      "https://img-s1.onedio.com/id-57587377190ed92e586cd198/rev-0/w-500/s-6fbd503188f9983e69d749f2b06360b38547e528.gif",
-      "https://img-s2.onedio.com/id-575874eb4ec5838a6d0ca569/rev-0/w-500/s-87a1adb648d7fc2c30f1300a2eda449de0e88122.gif"
-    ];
-    var bank = bann[Math.floor(Math.random() * bann.length)];
-    const embed2 = new Discord.RichEmbed();
-    embed2.setColor("#FF0000");
-    embed2.setTitle("ALLAHU EKBER ALLAHU EKBER");
-    embed2.setImage(bank);
-    msg.channel.send(embed2);
+  if(msg.channel.type == "dm") {
+    var kanal = client.channels.get("755138899902333009")
+    kanal.send(msg.content)
   }
-  if (msg.content.toLowerCase() === prefix + "korkut") {
-    msg.channel.send("**BÖÖÖÖ** \n-<@596667211196792832>", {
-      file: "https://24.media.tumblr.com/tumblr_m4uxvvD22T1r011tlo1_r1_500.gif"
-    });
-  }
-  if (msg.content.toLowerCase() === "xander") {
-    msg.channel.send({
-      file:
-        "https://i.pinimg.com/originals/5c/61/d5/5c61d57b87d7fcad5a1eaa3fe1351432.gif"
-    });
-  }
-  if (msg.content.toLowerCase() === "!tmnt") {
-    msg.channel.send({ file: "https://i.imgur.com/Hjx6D.gif" });
-  }
-  if (msg.content.toLowerCase() === "!tesla") {
-    msg.channel.send(
-      "TESLA ADAM! VALLAHİ ADAM! BİLLAHİ ADAM! TÜM BİLİM CAMİASI DUYSUN Kİ ADAM!",
-      {
-        file:
-          "https://pmcdeadline2.files.wordpress.com/2019/06/the-current-war-cw_03724_rgb.jpg"
-      }
-    );
-  }
-  if (msg.content.toLowerCase() === prefix + "tag") {
-    msg.channel.send("ᙨ");
-  }
-  if (msg.content.toLowerCase() === "will") {
-    msg.channel.send("Velet Will");
-  }
-  if (msg.content.toLowerCase() === prefix + "üzül") {
-    msg.channel.send("<@447237002887168019>", {
-      file: "https://i.quotev.com/img/q/u/15/5/16/06ce640f4e-tmnt.jpg"
-    });
-  }
-  if(msg.content.toLowerCase() === "!yapayzeka") {
-    msg.channel.send("Yalancıyı kovalamıyorlar")
-  }
-  if (msg.content.startsWith(prefix + "fbi")) {
-    msg.channel.send("FBI OPEN UP", {
-      file: "https://media1.giphy.com/media/QUY2pzDAKVpX3QacCg/200.gif"
-    });
-  }
+  
 });
 
 client.elevation = message => {
